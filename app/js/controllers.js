@@ -12,7 +12,7 @@ angular.module('gastropostAngular.controllers', [])
     scope.twitter = function() {
         http({
             method: 'GET',
-            url: '/hello.txt',
+            url: '/api/twitter/tweets',
         })
         .success(function(data, status) {
             console.log('SUCCESS');
