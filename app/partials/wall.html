@@ -1,12 +1,14 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="#">{{brand}}</a>
+    <div class="container pull-left" style="padding-left: 10px">
+      <a class="brand" href="#">
+        <img src="/img/logo-wide.png"/>
+      </a>
     </div>
   </div>
 </div>
 
-<div class="container" style="padding-top: 60px">
+<div class="container" style="padding-top: 110px">
   <div ng-repeat="row in tweets.statuses.chunk(3) " class="row">
     <div class="span4" ng-repeat="status in row">
       <div class="well" ng-if="instagrams[status.id]">
