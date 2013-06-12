@@ -4,48 +4,39 @@
 
 angular.module('gastropostAngular.controllers', [])
 
-.controller('WallController', ['$scope', '$resource', '$http', function(scope, resource, http) {
-  scope.brand = 'Gastropost Wall';
+    .controller('WallController', ['$scope', 'twitterService', function (scope, twitterService) {
+        scope.brand = 'Gastropost Wall';
 
-  scope.tweets = null;
+        scope.tweets = null;
+        scope.tweetGroups = null;
 
-  scope.instagrams={};
+        scope.instagrams = {};
 
-  scope.twitter = function() {
-    http({
-      method: 'GET',
-      url: '/api/twitter/tweets',
-    })
-    .success(function(data, status) {
-      scope.tweets = data;
+        twitterService.getGastropostTweets().$then(function (response) {
+            var statuses = response.data.statuses;
 
-      for (var i=0; i<scope.tweets.statuses.length; i++) {
-        var status = scope.tweets.statuses[i];
+            scope.tweetGroups = statuses.chunk(3);
 
-        if (status.entities && status.entities.urls) {
-          var urls = status.entities.urls;
+            for (var i = 0; i < statuses.length; i++) {
+                var status = statuses[i];
 
-          var INSTAGRAM_URL_PATTERN = /instagram\.com/;
+                if (status.entities && status.entities.urls) {
+                    var urls = status.entities.urls;
 
-          for (var j=0; j<urls.length; j++) {
-            var url = urls[j];
+                    var INSTAGRAM_URL_PATTERN = /instagram\.com/;
 
-            if (url.expanded_url.match(INSTAGRAM_URL_PATTERN)) {
-              scope.instagrams[status.id] = url.expanded_url + 'media';
-              break;
+                    for (var j = 0; j < urls.length; j++) {
+                        var url = urls[j];
+
+                        if (url.expanded_url.match(INSTAGRAM_URL_PATTERN)) {
+                            scope.instagrams[status.id] = url.expanded_url + 'media';
+                            break;
+                        }
+                    }
+                }
             }
-          }
-        }
-      }
-    })
-    .error(function(data, status) {
-      console.log('FAIL');
-      console.dir(data);
-    });
-  }
+        });
+    }])
 
-  scope.twitter();
-}])
-
-.controller('DetailsController', ['$scope', function(scope) {
-}]);
+    .controller('DetailsController', ['$scope', function (scope) {
+    }]);

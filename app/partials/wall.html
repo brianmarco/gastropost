@@ -1,37 +1,29 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container pull-left" style="padding-left: 10px">
-      <a class="brand" href="#">
-        <img src="/img/logo-wide.png"/>
-      </a>
-    </div>
-  </div>
-</div>
-
 <div class="container" style="padding-top: 110px">
-  <div ng-repeat="row in tweets.statuses.chunk(3) " class="row">
-    <div class="span4" ng-repeat="status in row">
-      <div class="well" ng-if="instagrams[status.id]">
-        <p class="lead">
-          {{status.text}}
-        </p>
-        <div class="pagination-centered" style="padding-bottom: 10px;">
-          <img ng-src="{{instagrams[status.id]}}"/>
+    <div ng-repeat="row in tweetGroups" class="row">
+        <div class="span4" ng-repeat="status in row">
+            <div class="well" ng-if="instagrams[status.id]">
+                <p class="lead">
+                    {{status.text}}
+                </p>
+
+                <div class="pagination-centered" style="padding-bottom: 10px;">
+                    <img ng-src="{{instagrams[status.id]}}"/>
+                </div>
+                <div style="padding-top: 10px; text-align: right;">
+                    <div>
+                        <img class="img-circle" ng-src="{{status.user.profile_image_url}}"/>
+                        {{status.user.screen_name}}
+                    </div>
+                </div>
+            </div>
+            <div class="well" ng-if="!instagrams[status.id]">
+                <h3>{{status.text}}</h3>
+
+                <div style="padding-top: 10px; text-align: right;">
+                    <img class="img-circle" ng-src="{{status.user.profile_image_url}}"/>
+                    {{status.user.screen_name}}
+                </div>
+            </div>
         </div>
-        <div style="padding-top: 10px; text-align: right;">
-          <div>
-            <img class="img-circle" ng-src="{{status.user.profile_image_url}}"/>
-            {{status.user.screen_name}}
-          </div>
-        </div>
-      </div>
-      <div class="well" ng-if="!instagrams[status.id]">
-        <h3>{{status.text}}</h3>
-        <div style="padding-top: 10px; text-align: right;">
-          <img class="img-circle" ng-src="{{status.user.profile_image_url}}"/>
-          {{status.user.screen_name}}
-        </div>
-      </div>
     </div>
-  </div>
 </div>

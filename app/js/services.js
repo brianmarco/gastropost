@@ -2,8 +2,20 @@
 
 /* Services */
 
+angular.module('gastropostAngular.services', [])
+    .service(
+    'twitterService',
+    function ($resource) {
+        this.twitterResource = new $resource(
+            '/api/twitter/tweets', {
+                gastroTweets: {
+                    method: 'GET'
+                }
+            }
+        );
 
-// Demonstrate how to register services
-// In this case it is a simple value service.
-angular.module('gastropostAngular.services', []).
-  value('version', '0.1');
+        this.getGastropostTweets = function() {
+            return this.twitterResource.get();
+        }
+    }
+);
