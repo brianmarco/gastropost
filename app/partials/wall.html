@@ -1,13 +1,13 @@
-<div class="container" style="padding-top: 110px">
-    <div ng-repeat="row in tweetGroups" class="row">
-        <div class="span4" ng-repeat="status in row">
-            <div class="well" ng-if="instagrams[status.id]">
+<div style="padding: 110px 20px 0px 20px;">
+    <div class="row-fluid">
+        <div ng-repeat="status in tweets" columns="3">
+            <div class="well" ng-if="tweetImages[status.id]">
                 <p class="lead">
                     {{status.text}}
                 </p>
 
                 <div class="pagination-centered" style="padding-bottom: 10px;">
-                    <img ng-src="{{instagrams[status.id]}}"/>
+                    <img ng-src="{{tweetImages[status.id]}}"/>
                 </div>
                 <div style="padding-top: 10px; text-align: right;">
                     <div>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="well" ng-if="!instagrams[status.id]">
+            <div class="well" ng-if="!tweetImages[status.id]">
                 <h3>{{status.text}}</h3>
 
                 <div style="padding-top: 10px; text-align: right;">

@@ -3,9 +3,7 @@
 /* Services */
 
 angular.module('gastropostAngular.services', [])
-    .service(
-    'twitterService',
-    function ($resource) {
+    .service('twitterService', function ($resource) {
         this.twitterResource = new $resource(
             '/api/twitter/tweets', {
                 gastroTweets: {
@@ -14,8 +12,7 @@ angular.module('gastropostAngular.services', [])
             }
         );
 
-        this.getGastropostTweets = function() {
+        this.getGastropostTweets = function () {
             return this.twitterResource.get();
         }
-    }
-);
+    });
