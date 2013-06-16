@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" name="Default" comment="Changed layout to 'pinterest-like' column layout.&#10;Added new directive to achieve new layout.&#10;Cleaned up app.css (wasn't using the menu style referred in it / inherited from angular-seed).">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/localStorageModule.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/partials/details.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/directives.js" afterPath="$PROJECT_DIR$/app/js/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/wall.html" afterPath="$PROJECT_DIR$/app/partials/wall.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gastropost.iws" />
@@ -78,7 +70,7 @@
       <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="18" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0">
+            <state line="19" column="18" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -726,7 +718,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0">
+        <state line="19" column="18" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
