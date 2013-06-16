@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
+    <list default="true" id="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" name="Default" comment="Changed layout to 'pinterest-like' column layout.&#10;Added new directive to achieve new layout.&#10;Cleaned up app.css (wasn't using the menu style referred in it / inherited from angular-seed).">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/localStorageModule.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/partials/details.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/directives.js" afterPath="$PROJECT_DIR$/app/js/directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
@@ -12,18 +14,18 @@
     </list>
     <ignored path="gastropost.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371085720447" ignored="false" />
-    <file path="/controllers.js" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371141491162" ignored="false" />
+    <file path="/Dummy.txt" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371359520018" ignored="false" />
+    <file path="/controllers.js" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371227440668" ignored="false" />
     <file path="/twitter-api.conf.js" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1370979049753" ignored="false" />
     <file path="/server.js" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1370979116347" ignored="false" />
     <file path="/.gitignore" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1370980176939" ignored="false" />
     <file path="/app.js" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1370996512672" ignored="false" />
-    <file path="/services.js" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371003936208" ignored="false" />
-    <file path="/wall.html" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371093137398" ignored="false" />
-    <file path="/a.dummy" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371092963085" ignored="false" />
-    <file path="/directives.js" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371141530625" ignored="false" />
+    <file path="/services.js" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371226763643" ignored="false" />
+    <file path="/wall.html" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371172418714" ignored="false" />
+    <file path="/a.dummy" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371227147821" ignored="false" />
+    <file path="/directives.js" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371163260126" ignored="false" />
     <file path="/wall2.html" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371137842627" ignored="false" />
-    <file path="/index.html" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371095215928" ignored="false" />
+    <file path="/index.html" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371173585388" ignored="false" />
     <file path="/app.css" changelist="f7409df4-79c3-43e4-98f3-5ddaa4d62ae3" time="1371137271597" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +49,19 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="7" selection-start="2234" selection-end="2234" vertical-scroll-proportion="0.0">
+            <state line="18" column="15" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="localStorageModule.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/localStorageModule.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="236" column="20" selection-start="10522" selection-end="10522" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,25 +69,25 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
+            <state line="23" column="7" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="19" column="18" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="directives.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="4" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
+            <state line="29" column="51" selection-start="916" selection-end="916" vertical-scroll-proportion="0.9375">
               <folding />
             </state>
           </provider>
@@ -83,7 +96,7 @@
       <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="30" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+            <state line="60" column="52" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,7 +114,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="35" selection-start="1117" selection-end="1117" vertical-scroll-proportion="-21.25">
+            <state line="38" column="33" selection-start="1275" selection-end="1275" vertical-scroll-proportion="-23.416666">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -121,7 +134,7 @@
       <file leaf-file-name="wall.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/partials/wall.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="1139" selection-end="1139" vertical-scroll-proportion="-18.125">
+            <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="-0.0">
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -151,14 +164,15 @@
         <option value="$PROJECT_DIR$/config/twitter-api.conf.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/config/.gitignore" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/partials/wall2.html" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
-        <option value="$PROJECT_DIR$/app/partials/wall.html" />
-        <option value="$PROJECT_DIR$/app/js/app.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/js/directives.js" />
+        <option value="$PROJECT_DIR$/app/partials/wall.html" />
+        <option value="$PROJECT_DIR$/app/js/localStorageModule.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
@@ -514,20 +528,24 @@
       <created>1371005360636</created>
       <updated>1371005360636</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed layout to 'pinterest-like' column layout.&#10;Added new directive to achieve new layout.&#10;Cleaned up app.css (wasn't using the menu style referred in it / inherited from angular-seed).">
+      <created>1371141943816</created>
+      <updated>1371141943816</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38653368" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45137158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.7373949" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21736011" sideWeight="0.7381546" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.7373949" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2733142" sideWeight="0.6134663" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2733142" sideWeight="0.54862845" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -583,7 +601,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored http call out of controller and into formal service.&#10;General formatting changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed layout to 'pinterest-like' column layout.&#10;Added new directive to achieve new layout.&#10;Cleaned up app.css (wasn't using the menu style referred in it / inherited from angular-seed)." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -598,9 +616,12 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Refactored http call out of controller and into formal service.&#10;General formatting changes." />
+    <MESSAGE value="Changed layout to 'pinterest-like' column layout.&#10;Added new directive to achieve new layout.&#10;Cleaned up app.css (wasn't using the menu style referred in it / inherited from angular-seed)." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/karma.conf.js">
@@ -648,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/filters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="9" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
@@ -669,39 +683,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="7" selection-start="2234" selection-end="2234" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="35" selection-start="1117" selection-end="1117" vertical-scroll-proportion="-21.25">
+        <state line="38" column="33" selection-start="1275" selection-end="1275" vertical-scroll-proportion="-23.416666">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/localStorageModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="236" column="20" selection-start="10522" selection-end="10522" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="7" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+        <state line="60" column="52" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/wall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1139" selection-end="1139" vertical-scroll-proportion="-18.125">
+        <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -710,7 +726,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="19" column="18" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="15" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="51" selection-start="916" selection-end="916" vertical-scroll-proportion="0.9375">
           <folding />
         </state>
       </provider>

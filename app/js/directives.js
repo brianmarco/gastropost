@@ -12,6 +12,8 @@ angular.module('gastropostAngular.directives', [])
 
                 var columnDivs = [];
 
+                var columnDivHeights = [];
+
                 for (var i = 0; i < chunkSize; i++) {
                     columnDivs.push(jQuery('<div class="span4"></div>'));
                     container.append(columnDivs[i]);
@@ -28,6 +30,12 @@ angular.module('gastropostAngular.directives', [])
                         columnDivs[j].append(kidGroup[j]);
                     }
                 }
+
+//                for (var i = 0; i < chunkSize; i++) {
+//                    columnDivHeights[i] = columnDivs[i].height();
+//                }
+
+//                console.dir(columnDivHeights);
             }
         };
     });
