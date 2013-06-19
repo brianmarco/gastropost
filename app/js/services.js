@@ -9,22 +9,18 @@ angular.module('gastropostAngular.services', [])
     .service('twitterService', function ($resource) {
         var twitterResource = new $resource('/api/twitter/tweets');
 
-        var getGastropostTweets = function (getFreshTweets) {
+        this.getGastropostTweets = function (getFreshTweets) {
             if (getFreshTweets) {
                 return twitterResource.get({fresh: true});
             }
 
             return twitterResource.get();
         }
-
-        return {
-            getGastropostTweets: getGastropostTweets
-        }
     })
 
     // Fetch possible images for an array of tweets (i.e. statuses)
     .service('tweetsImageService', function () {
-        var getImagesForTweets = function (tweets) {
+        this.getImagesForTweets = function (tweets) {
             var tweetImages = {};
 
             for (var i = 0; i < tweets.length; i++) {
@@ -69,9 +65,5 @@ angular.module('gastropostAngular.services', [])
             }
 
             return tweetImages;
-        }
-
-        return {
-            getImagesForTweets: getImagesForTweets
         }
     });
