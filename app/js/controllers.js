@@ -7,25 +7,14 @@ angular.module('gastropostAngular.controllers', [])
         '$scope',
         '$routeParams',
         'twitterService',
-        'tweetsCacheService',
         'tweetsImageService',
 
-        function (scope, routeParams, twitterService, tweetsCacheService, tweetsImageService) {
-            scope.tweetsCache = tweetsCacheService;
+        function (scope, routeParams, twitterService, tweetsImageService) {
             scope.tweets = null;
             scope.tweetImages = null;
 
-            if (routeParams.fresh ||
-                !scope.tweetsCache.getTweetsAge() ||
-                scope.tweetsCache.getTweetsAge() < ((new Date()).getTime() - 1800000)) {
-                twitterService.getGastropostTweets().$then(function (response) {
-                    scope.tweets = response.data.statuses;
-                    scope.tweetsCache.putTweets(scope.tweets);
-                    scope.tweetImages = tweetsImageService.getImagesForTweets(scope.tweets);
-                });
-            }
-            else {
-                scope.tweets = scope.tweetsCache.getTweets();
+            twitterService.getGastropostTweets(routeParams.fresh).$then(function (response) {
+                scope.tweets = response.data.statuses;
                 scope.tweetImages = tweetsImageService.getImagesForTweets(scope.tweets);
-            }
+            });
         }]);

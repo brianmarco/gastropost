@@ -7,15 +7,13 @@ angular.module('gastropostAngular.services', [])
     // Service getting at the tweets. Uses a server side REST client to get around cross domain issues.  Not quite a
     // Server Proxy but pretty darn close. :)  Returns the raw response from Twitter Search API (as a promise).
     .service('twitterService', function ($resource) {
-        var twitterResource = new $resource(
-            '/api/twitter/tweets', {
-                gastroTweets: {
-                    method: 'GET'
-                }
-            }
-        );
+        var twitterResource = new $resource('/api/twitter/tweets');
 
-        var getGastropostTweets = function () {
+        var getGastropostTweets = function (getFreshTweets) {
+            if (getFreshTweets) {
+                return twitterResource.get({fresh: true});
+            }
+
             return twitterResource.get();
         }
 
@@ -24,37 +22,8 @@ angular.module('gastropostAngular.services', [])
         }
     })
 
-    // Service for caching tweets retrieved.  This is a "dumb" cache in the sense that it does not provide any
-    // mechanism for tracking "staleness" of cached objects.  Said another way, this is a simple persistent hash.
-    .service('tweetsCacheService', function (localStorageService) {
-        var getTweetsAge = function () {
-            return localStorageService.get('tweetsAge');
-        }
-
-        var getTweets = function () {
-            return JSON.parse(localStorageService.get('tweets'));
-        }
-
-        var putTweets = function (tweets) {
-            localStorageService.clearAll();
-            localStorageService.set('tweets', JSON.stringify(tweets));
-            localStorageService.set('tweetsAge', (new Date()).getTime());
-        }
-
-        var clear = function () {
-            localStorageService.clearAll();
-        }
-
-        return {
-            getTweetsAge: getTweetsAge,
-            getTweets: getTweets,
-            putTweets: putTweets,
-            clear: clear
-        }
-    })
-
     // Fetch possible images for an array of tweets (i.e. statuses)
-    .service('tweetsImageService', function (localStorageService) {
+    .service('tweetsImageService', function () {
         var getImagesForTweets = function (tweets) {
             var tweetImages = {};
 

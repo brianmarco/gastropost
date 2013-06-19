@@ -8,8 +8,7 @@ angular.module(
             'gastropostAngular.services',
             'gastropostAngular.directives',
             'gastropostAngular.controllers',
-            'ngResource',
-            'LocalStorageModule'
+            'ngResource'
         ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when(

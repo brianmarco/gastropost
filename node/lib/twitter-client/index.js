@@ -1,8 +1,10 @@
-var express = require('express');
+// 
+// Client for Twitter API
+//
 
 // Extra configuration file needed to store Twitter API tokens.
 // Not included in git repo.
-var TWITTER_API_CONFIG_FILE = './config/twitter-api.conf.js';
+var TWITTER_API_CONFIG_FILE = './twitter-api.conf.js';
 var TWITTER_API_CONFIG = require(TWITTER_API_CONFIG_FILE);
 var BEARER_TOKEN = TWITTER_API_CONFIG.bearerToken;
 if (!BEARER_TOKEN) {
@@ -15,21 +17,13 @@ if (!BEARER_TOKEN) {
     process.exit(1);
 }
 
-// Setup the port.  Ensure friendliness with Heroku by using process.env.PORT
-var DEFAULT_PORT = 5000;
-var port = (Number(process.argv[2]) || process.env.PORT || DEFAULT_PORT);
-
 // Setup the REST client for accessing the Twitter API.
 // This will use Application-only authentication (https://dev.twitter.com/docs/auth/application-only-auth).
 var Client = require('node-rest-client').Client;
 var client = new Client();
 client.registerMethod('findTweets', 'https://api.twitter.com/1.1/search/tweets.json', 'GET');
 
-var app = express();
-
-app.use(express.static(__dirname + '/app'));
-
-app.get('/api/twitter/tweets', function (req, res) {
+exports.findTweets = function (callback) {
     var args = {
         parameters: {
             q: '%23gastropost%20-RT'
@@ -37,12 +31,7 @@ app.get('/api/twitter/tweets', function (req, res) {
         headers: {
             Authorization: 'Bearer ' + BEARER_TOKEN
         }
-    }
-    client.methods.findTweets(args, function (data, response) {
-        res.send(data);
-    });
-});
+    };
 
-app.listen(port);
-
-console.log('Listening on port ' + port);
+    client.methods.findTweets(args, callback);
+}
