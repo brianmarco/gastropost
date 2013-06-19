@@ -2,13 +2,14 @@
     <div class="row-fluid">
         <div ng-repeat="status in tweets" columns="3">
             <div class="well" ng-if="tweetImages[status.id]">
+                <div class="pagination-centered" style="padding-bottom: 10px;">
+                    <img ng-src="{{tweetImages[status.id]}}"/>
+                </div>
+
                 <p class="lead">
                     {{status.text}}
                 </p>
 
-                <div class="pagination-centered" style="padding-bottom: 10px;">
-                    <img ng-src="{{tweetImages[status.id]}}"/>
-                </div>
                 <div style="padding-top: 10px; text-align: right;">
                     <div>
                         <img class="img-circle" ng-src="{{status.user.profile_image_url}}"/>
