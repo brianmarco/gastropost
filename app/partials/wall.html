@@ -1,28 +1,22 @@
 <div id="wall">
     <div class="row-fluid">
         <div ng-repeat="status in tweets" columns="3">
-            <div class="well" ng-if="tweetImages[status.id]">
+            <div class="well" ng-switch on="!!tweetImages[status.id]">
                 <div class="pagination-centered" style="padding-bottom: 10px;">
-                    <img ng-src="{{tweetImages[status.id]}}"/>
+                    <img  ng-switch-when="true" ng-src="{{tweetImages[status.id]}}"/>
                 </div>
 
-                <p class="lead">
-                    {{status.text}}
-                </p>
+                <p ng-switch-when="true" class="lead" ng-bind-html="status.text | linky"></p>
 
-                <div style="padding-top: 10px; text-align: right;">
+                <h3 ng-switch-when="false" ng-bind-html="status.text | linky"></h3>
+
+                <hr/>
+
+                <div style="text-align: right;">
                     <div>
                         <img class="img-circle" ng-src="{{status.user.profile_image_url}}"/>
                         {{status.user.screen_name}}
                     </div>
-                </div>
-            </div>
-            <div class="well" ng-if="!tweetImages[status.id]">
-                <h3>{{status.text}}</h3>
-
-                <div style="padding-top: 10px; text-align: right;">
-                    <img class="img-circle" ng-src="{{status.user.profile_image_url}}"/>
-                    {{status.user.screen_name}}
                 </div>
             </div>
         </div>

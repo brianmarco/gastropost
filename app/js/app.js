@@ -8,7 +8,8 @@ angular.module(
             'gastropostAngular.services',
             'gastropostAngular.directives',
             'gastropostAngular.controllers',
-            'ngResource'
+            'ngResource',
+            'ngSanitize'
         ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when(
